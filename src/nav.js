@@ -4,12 +4,14 @@ homeIcon.src = hIcon;
 homeIcon.classList.add('homeIcon')
 const nav = () => {
   const navbar = document.createElement('div');
-  navbar.classList.add('nav', 'container');
+  navbar.classList.add('nav');
   navbar.innerHTML = `
-  ${homeIcon.outerHTML}
-  <div class="tabs">
-  <h2 class="menu">Menu</h2>
-  <h2 class="about">About</h2>
+  <div class="container container--nav">
+    ${homeIcon.outerHTML}
+    <div class="tabs">
+      <h2 class="menu">Menu</h2>
+      <h2 class="about">About</h2>
+    </div>
   </div>`;
   return navbar;
 }

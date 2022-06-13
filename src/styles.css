@@ -1,5 +1,6 @@
 /* FONT FAMILY */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oregano:ital@1&display=swap');
 /*
 =============== 
 Global Styles/ Reset
@@ -134,15 +135,89 @@ utility clases
   margin-inline: auto;
   max-width: 1200px;
 }
+.btn{
+  background: transparent;
+  border-radius: 5px;
+  padding-block: .2rem;
+  width: 8rem;
+}
+.btn:hover{
+  cursor: pointer;
+}
+
 /* -----------------
 RESTAURANT STYLES
 ---------------------*/
-.nav{
-  display: flex;
-  justify-content: space-between;
-  padding: .5rem;
+@media screen and (min-width: 0px) {
+  .bg-home{
+    min-height: 95vh;
+    background-image: url('./images/bg_mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /*----------
+    NAVBAR
+   ------------ */
+  .nav{
+  background-color: black;
+  }
+  .container--nav{
+    
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    height: 5vh;
+  }
+  /* change svg color */
+  .homeIcon{
+    filter:invert(99%) sepia(99%) saturate(0%) hue-rotate(325deg) brightness(111%) contrast(100%);
+  }
+  .homeIcon:hover{
+    cursor: pointer;
+  }
+  .tabs{
+    display: flex;
+    gap: 2rem;
+  }
+  .tabs *{
+    cursor: pointer;
+  }
+  /* ----------
+  HERO
+  ------------- */
+  .hero{
+    display: grid;
+    gap: 2rem;
+    place-content: center;
+    height: calc(100vh - 5vh);
+  }
+  .title{
+    font-family: 'Oregano', cursive;
+    color: #ffcba2;
+    font-size: 3rem;
+    text-shadow: 3px 2px black;
+  }
+  .btn--order{
+    place-self: center;
+    color: #ff9849;
+    border: 2px solid #000000;
+    text-shadow: 2px 1px black;
+    transition: 0.25s;
+  }
+  .btn--order:hover{
+    background-color: #ffcaa252;
+   
+  }
 }
-.tabs{
-  display: flex;
-  gap: 2rem;
+
+@media screen and (min-width: 1200px) {
+  body{
+    background-image: url('./images/bg_pizzeria.jpg');
+  }
+  .hero{
+    background: transparent;
+  }
+  
 }
