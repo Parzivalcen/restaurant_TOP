@@ -4,7 +4,7 @@ Tata Rendygui is in the Guaraní language, it means "From the fire"
 
 This is my first webpage made with JS modules with the help of webpack, it is quite fun to work modules so far. 
 
-![Website]('./Screenshot from 2022-06-14 18-48-26.png')
+![Website](./webpage.png)
 
 Check out the live [demo](https://parzivalcen.github.io/restaurant_TOP/)
 
