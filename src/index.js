@@ -29,14 +29,14 @@ mainCont.appendChild(homePage())
 // if the container exist we need to remove it 
 const menu = document.querySelector('.menu');
 menu.addEventListener('click', () => {
-  if(document.querySelector('.container--home')){
-    document.querySelector('.container--home').remove();
+  if(document.querySelector('.bg-home')){
+    document.querySelector('.bg-home').remove();
   }else if (document.querySelector('.container--about')){
     console.log('about exist')
     document.querySelector('.container--about').remove();
   }
   // if content exist dont add it
-  if(!document.querySelector('.container--menu')){
+  if(!document.querySelector('.bg-menu')){
     mainCont.appendChild(menuPage())
   }
 });
@@ -45,11 +45,11 @@ menu.addEventListener('click', () => {
 const about = document.querySelector('.about');
 about.addEventListener('click', () => {
   // remove menu if exist
-  if(document.querySelector('.container--menu')){
-    document.querySelector('.container--menu').remove();
+  if(document.querySelector('.bg-menu')){
+    document.querySelector('.bg-menu').remove();
     // remove home if exist
-  }else if (document.querySelector('.container--home')){
-    document.querySelector('.container--home').remove();
+  }else if (document.querySelector('.bg-home')){
+    document.querySelector('.bg-home').remove();
   }
   // if content exist dont add it
   
@@ -61,14 +61,14 @@ about.addEventListener('click', () => {
 const home = document.querySelector('.homeIcon');
 home.addEventListener('click', () => {
   // remove menu if exist
-  if(document.querySelector('.container--menu')){
-    document.querySelector('.container--menu').remove();
+  if(document.querySelector('.bg-menu')){
+    document.querySelector('.bg-menu').remove();
     // remove about if exist
   }else if (document.querySelector('.container--about')){
     document.querySelector('.container--about').remove();
   }
   // if content exist dont add it
-  if(!document.querySelector('.container--home')){
+  if(!document.querySelector('.bg-home')){
     mainCont.appendChild(homePage())
   }
 });
