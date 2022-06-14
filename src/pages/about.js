@@ -2,14 +2,7 @@
 import aboutImg from '../images/about.jpg';
 const AboutImg = new Image();
 AboutImg.src = aboutImg;
-// Social Icons
-import twIcon from '../images/twitter.svg';
-const IconTw = new Image();
-IconTw.src = twIcon;
 
-import igIcon from '../images/insta.svg';
-const IconIg = new Image();
-IconIg.src = igIcon;
 const about = () => {
   const about = document.createElement('div');
   const bgAbout = document.createElement('div');
@@ -24,14 +17,6 @@ const about = () => {
   <div class="about-img">
     ${AboutImg.outerHTML}
     </div>
-    
-    <div class="socials">
-    <i>
-    ${IconTw.outerHTML}
-    </i>
-    <i>
-    ${IconIg.outerHTML}
-    </i>
   </div>`
   bgAbout.appendChild(about);
   return bgAbout;

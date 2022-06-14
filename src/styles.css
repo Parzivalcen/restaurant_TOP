@@ -6,6 +6,10 @@
 Global Styles/ Reset
 ===============
 */
+:root {
+  --window-height-large: calc(100vh - 14vh); 
+  --window-height-small: calc(100vh - 16vh - 5vh); 
+}
 
 *,
 *::after,
@@ -144,13 +148,15 @@ utility clases
 .btn:hover{
   cursor: pointer;
 }
-
+.bg-black{
+  background-color: #000000;
+}
 /* -----------------
 RESTAURANT STYLES
 ---------------------*/
 @media screen and (min-width: 0px) {
   .bg-home{
-    min-height: 95vh;
+    height: var(--window-height-small);
     background-image: url('./images/bg_mobile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -171,7 +177,7 @@ RESTAURANT STYLES
     height: 5vh;
   }
   /* change svg color */
-  .homeIcon{
+  .homeIcon,.maps-icon,.ig-icon{
     filter:invert(99%) sepia(99%) saturate(0%) hue-rotate(325deg) brightness(111%) contrast(100%);
   }
   .homeIcon:hover{
@@ -214,6 +220,7 @@ RESTAURANT STYLES
 
 @media screen and (min-width: 1200px) {
   .bg-home{
+    height: var(--window-height-large);
     background-image: url('./images/bg_pizzeria.jpg');
   }
 }
@@ -223,7 +230,7 @@ RESTAURANT STYLES
   @media screen and (min-width:0px) {
     
   .bg-menu{
-    min-height: 95vh;
+    min-height: var(--window-height-small);
     background-color: #1b1b1b;
   }
   .container--menu{
@@ -252,10 +259,17 @@ RESTAURANT STYLES
     background-color: #000000;
     border-radius: 5px;
     justify-self: center;
+    display: grid;
+    align-content: space-between;
+  }
+  .menu-card:last-child{
+    margin-bottom: 1vh;
   }
   .btn--menu{
     color: #ff9849;
     border: 2px solid #ff9849;
+    justify-self: center;
+    
   }
   .menu-card > h3{
     font-family: 'Oregano', cursive;
@@ -266,23 +280,30 @@ RESTAURANT STYLES
     color:#ffff;
   }
 }
+@media screen and (min-width: 1200px) {
+  .bg-menu{
+    height: var(--window-height-large);
+  }
+}
 /*----------
   ABOUT US
   ------------ */
   @media screen and (min-width: 0px) {
     .bg-about{
-      min-height: 95vh;
+      min-height: var(--window-height-small);
       background-color: #1b1b1b;
+      display: grid;
+      place-content: center;
     }
     .container--about{
-    display: grid;
-    place-content: center;
+      display: grid;
+      place-content: center;
     }
     .about-text  {
       color: white;
       text-align: center;
       padding: .5rem;
-   
+      
     }
     .about-text > h1 {
       color: #ff9849;
@@ -290,3 +311,61 @@ RESTAURANT STYLES
     }
     
   }
+  @media screen and (min-width: 800px) {
+    .container--about{
+      grid-template-columns: 1fr 1fr;
+      place-content: center;
+    }
+    .about-text{
+      display: grid;
+      place-content: center;
+    }    
+    .about-text p{
+      text-align: left;
+    }
+    
+    .about-img {
+      padding: .4rem;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .bg-about{
+      height: var(--window-height-large);
+    }
+  }
+
+  /*----------
+    FOOTER
+    ------------ */
+    @media screen and (min-width: 0px) {
+      .footer{
+        padding: 1vh;
+        height: 15vh;
+        color: white;
+      }
+      .container--footer{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 20rem);
+        place-items: center;
+        place-content: center;
+      }
+      .made{
+        margin-top: .4rem;
+        font-size: .7rem;
+      }
+      .location, .socials{
+        display: grid;
+        place-items: center;
+      }
+      .maps-icon:hover,.ig-icon:hover{
+        filter: invert(66%) sepia(8%) saturate(4173%) hue-rotate(333deg) brightness(107%) contrast(101%);
+        cursor: pointer;
+      }    
+    }
+    @media screen and (min-width: 1200px) {
+      .footer{
+        height: 9vh;
+      }
+      
+    }
+  

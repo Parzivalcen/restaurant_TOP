@@ -4,6 +4,8 @@ import navBar from './nav';
 import homePage from './pages/home';
 import menuPage from './pages/menu';
 import aboutPage from './pages/about';
+// Footer
+import footer from './pages/footer';
 // Assets
 
 import './styles.css';
@@ -72,6 +74,7 @@ home.addEventListener('click', () => {
     mainCont.appendChild(homePage())
   }
 });
+body.append(footer());
 
 
 
