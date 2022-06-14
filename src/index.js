@@ -31,9 +31,9 @@ const menu = document.querySelector('.menu');
 menu.addEventListener('click', () => {
   if(document.querySelector('.bg-home')){
     document.querySelector('.bg-home').remove();
-  }else if (document.querySelector('.container--about')){
+  }else if (document.querySelector('.bg-about')){
     console.log('about exist')
-    document.querySelector('.container--about').remove();
+    document.querySelector('.bg-about').remove();
   }
   // if content exist dont add it
   if(!document.querySelector('.bg-menu')){
@@ -53,7 +53,7 @@ about.addEventListener('click', () => {
   }
   // if content exist dont add it
   
-  if(!document.querySelector('.container--about')){
+  if(!document.querySelector('.bg-about')){
     mainCont.appendChild(aboutPage())
   }
 });
@@ -64,8 +64,8 @@ home.addEventListener('click', () => {
   if(document.querySelector('.bg-menu')){
     document.querySelector('.bg-menu').remove();
     // remove about if exist
-  }else if (document.querySelector('.container--about')){
-    document.querySelector('.container--about').remove();
+  }else if (document.querySelector('.bg-about')){
+    document.querySelector('.bg-about').remove();
   }
   // if content exist dont add it
   if(!document.querySelector('.bg-home')){

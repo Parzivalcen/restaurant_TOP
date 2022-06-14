@@ -29,21 +29,24 @@ const menu = () => {
     ${ImgMargherita.outerHTML}
     <h3>Margherita</h3>
     <p>Classic Italian Masterpiece. Do you need any more info than that?</p>
-  </div>
-
-  <!-- SingleCard -->
-  <div class="menu-card">
+    <button class="btn btn--menu">order now</button>
+    </div>
+    
+    <!-- SingleCard -->
+    <div class="menu-card">
     ${ImgDiavola.outerHTML}
     <h3>Deavola</h3>
     <p>Can you stand the spice?</p>
     <p>Delicious spicy fresh chillies sauce</p>
-  </div>
-
-  <!-- SingleCard -->
-  <div class="menu-card">
+    <button class="btn btn--menu">order now</button>
+    </div>
+    
+    <!-- SingleCard -->
+    <div class="menu-card">
     ${ImgRandom.outerHTML}
     <h3>Feeling lucky?</h3>
-    <p>We will pick the flavors randomly for you</p>
+    <p>We will randomly pick the flavors for you</p>
+    <button class="btn btn--menu">order now</button>
   </div>
   
 </div>`
