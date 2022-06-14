@@ -1,0 +1,1 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThen we create a new branch e.g. gh-pages\\E$"}
